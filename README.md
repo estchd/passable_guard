@@ -2,20 +2,20 @@
 
 The Passable Guard Crate provides a way to check for FFI memory leaks at runtime.
 
-This is achieved by providing a [PassableContainer] class that encapsulates
-a [Passable] Object that can be converted to a raw pointer to pass it over a FFI boundary.
+This is achieved by providing a PassableContainer class that encapsulates
+a Passable Object that can be converted to a raw pointer to pass it over a FFI boundary.
 
-This [PassableContainer] combines the raw pointer with a [PassableGuard]
-when converting the [Passable].
+This PassableContainer combines the raw pointer with a PassableGuard
+when converting the Passable.
 
-This [PassableGuard] will panic if it is dropped before recombining it with the raw pointer.
+This PassableGuard will panic if it is dropped before recombining it with the raw pointer.
 
 That way, you will at least get a panic instead of leaking memory
 
 ## Example
 
 For this example, we will create a CString and pass it to a fictional FFI function `setName`,
-using a [PassableContainer] to guard against Memory Leaks
+using a PassableContainer to guard against Memory Leaks
 
 ``` rust
 use std::ffi::CString;
