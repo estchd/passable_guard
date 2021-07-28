@@ -17,7 +17,7 @@
 //! For this example, we will create a CString and pass it to a fictional FFI function `setName`,
 //! using a [PassableContainer] to guard against Memory Leaks
 //!
-//! ```
+//! ``` rust
 //! use std::ffi::CString;
 //! use passable_guard::PassableContainer;
 //!
@@ -55,7 +55,7 @@
 //!
 //! Let's look at an example that Panics
 //!
-//! ```
+//! ``` rust
 //! use std::ffi::CString;
 //! use passable_guard::PassableContainer;
 //!

@@ -17,7 +17,7 @@ That way, you will at least get a panic instead of leaking memory
 For this example, we will create a CString and pass it to a fictional FFI function `setName`,
 using a [PassableContainer] to guard against Memory Leaks
 
-```
+``` rust
 use std::ffi::CString;
 use passable_guard::PassableContainer;
 
@@ -55,7 +55,7 @@ fn passable_example(name: CString) -> Result<(),()> {
 
 Let's look at an example that Panics
 
-```
+``` rust
 use std::ffi::CString;
 use passable_guard::PassableContainer;
 
